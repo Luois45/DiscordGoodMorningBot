@@ -1,0 +1,2 @@
+###### Requirements ######
+discord.py==2.1.1
