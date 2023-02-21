@@ -13,7 +13,7 @@ parser.add_argument('--clearallmessages')
 
 args = parser.parse_args()
 
-client = discord.Client()
+client = discord.Client(intents=discord.Intents.default())
 
 if args.useenvironmentvariables:
 	TOKEN = os.environ.get('TOKEN')
