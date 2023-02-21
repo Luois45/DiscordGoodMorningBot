@@ -17,7 +17,7 @@ client = discord.Client(intents=discord.Intents.default())
 
 if args.useenvironmentvariables:
 	TOKEN = os.environ.get('TOKEN')
-	CHANNEL_ID = os.environ.get('CHANNEL_ID')
+	CHANNEL_ID = int(os.environ.get('CHANNEL_ID'))
 	NAME = os.environ.get('NAME')
 else:
 	# Discord-Bot-Token hier einfügen
