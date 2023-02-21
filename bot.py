@@ -64,7 +64,7 @@ messages = [
 async def send_guten_morgen():
 	channel = client.get_channel(CHANNEL_ID)
 	if CLEAR_CHANNEL:
-		await channel.purge()
+		await channel.purge(check=None)
 	await channel.send(random.choice(messages))
 
 
