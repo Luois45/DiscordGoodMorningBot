@@ -19,4 +19,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Execute the script
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+        NAME: ${{ secrets.NAME }}
       run: python bot.py --useenvironmentvariables 1 --skiptimecheck 1 --clearallmessages 1
